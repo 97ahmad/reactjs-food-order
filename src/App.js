@@ -6,7 +6,7 @@ import Cart from './src/components/Cart/Cart';
 function App() {
   return (
     <CartProvider>
-      <Cart />
+      {cartIsShown && <Cart onClose={hideCartHandler}/>}
       <Header />
       <main>
         <Meals />
